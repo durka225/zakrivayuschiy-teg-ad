@@ -1,9 +1,45 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font: 'Inter';
-    --accent-font: 'PressStart2P';
-    --bg-color: #fff;
-    --color: #000;
-    --stroke-color: #fff;
-    --heart-color: red;
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", cursive;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --main-font-weight: var(--fw-reg);
+  --card-title-weight: var(--fw-bold);
+
+  --bg-color: #ffffff;
+  --accent-color: #000000;
+  --text-stroke-color: #ffffff;
+  --button-text-color: #ffffff;
+  --button-hover-bg: var(--accent-color);
+
+  --section-width: clamp(375px, 100%, 700px);
+  --content-section-width: var(--section-width);
+
+  --header-padding: clamp(120px, 15vh, 136px) clamp(10px, 5vw, 20px);
+  --header-logo-size: clamp(3.0625rem, 8vw, 4.0625rem);
+
+  --card-gap: 50px;
+  --content-bottom-margin: 100px;
+
+  --grid-color: #d3d3d3;
+  --grid-thickness: 2px;
+  --grid-step: 4px;
+
+  --bg-image:
+    repeating-linear-gradient(
+      to right,
+      var(--grid-color) 0 var(--grid-thickness),
+      transparent var(--grid-thickness) var(--grid-step)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--grid-color) 0 var(--grid-thickness),
+      transparent var(--grid-thickness) var(--grid-step)
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  --contour-color: black;
+  --animation-fill-color: red;
 }

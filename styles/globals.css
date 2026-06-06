@@ -1,3 +1,7 @@
+/* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
+Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
+Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
+
 *,
 *::after,
 *::before {
@@ -17,8 +21,7 @@ h6,
 p,
 ul,
 ol,
-li,
-figure {
+li {
   margin: 0;
   padding: 0;
 }
@@ -47,4 +50,16 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.page {
+  min-inline-size: 375px;
+  min-block-size: 100dvb;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--main-font-weight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
